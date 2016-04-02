@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Parallaxer</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+
+			.content {
+				height: 200px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="../src/jquery.parallaxer.css">
+	</head>
+	<body>
+		<div class="content"></div>
+		<div class="parallaxer">
+			<img src="images/earth.jpg">
+		</div>
+		<div class="content"></div>
+		<div class="parallaxer">
+			<img src="images/library.jpg">
+		</div>
+		<div class="content"></div>
+		<div class="parallaxer">
+			<img src="images/rocket.jpg">
+		</div>
+		<div class="content"></div>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script type="text/javascript" src="../src/jquery.parallaxer.js"></script>
+		<script type="text/javascript">
+			(function ($) {
+				"use strict";
+
+				$(function () {
+					$(".parallaxer").parallaxer();
+				});
+			}(jQuery));
+		</script>
+	</body>
+</html>
