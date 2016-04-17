@@ -1,5 +1,5 @@
 if (typeof jQuery === "undefined") {
-	throw new Error("Parallaxer required jQuery!");
+	throw new Error("Parallaxer requires jQuery!");
 }
 
 (function ($) {
