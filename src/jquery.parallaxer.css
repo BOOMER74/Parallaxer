@@ -18,10 +18,10 @@
 	min-width:          100%;
 	opacity:            0;
 	position:           absolute;
-	-webkit-transition: opacity 250ms ease-out, translate3d 375ms linear;
-	-moz-transition:    opacity 250ms ease-out, translate3d 375ms linear;
-	-o-transition:      opacity 250ms ease-out, translate3d 375ms linear;
-	transition:         opacity 250ms ease-out, translate3d 375ms linear;
+	-webkit-transition: opacity 250ms ease-out;
+	-moz-transition:    opacity 250ms ease-out;
+	-o-transition:      opacity 250ms ease-out;
+	transition:         opacity 250ms ease-out;
 }
 
 .parallaxer-not-supported {

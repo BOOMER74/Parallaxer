@@ -25,15 +25,17 @@ if (typeof jQuery === "undefined") {
 						containerTop = $(this).offset().top,
 						containerHeight = $(this).outerHeight();
 
-					var translate = (imageHeight - containerHeight) * ((windowBottom - containerTop) / (containerHeight + windowHeight));
+					var translate = Math.round((imageHeight - containerHeight) * ((windowBottom - containerTop) / (containerHeight + windowHeight)));
 
-					$image.css({
-						"-webkit-transform": "translate3D(-50%, " + translate + "px, 0)",
-						"-moz-transform": "translate3D(-50%, " + translate + "px, 0)",
-						"-ms-transform": "translate3D(-50%, " + translate + "px, 0)",
-						"-o-transform": "translate3D(-50%, " + translate + "px, 0)",
-						"transform": "translate3D(-50%, " + translate + "px, 0)"
-					});
+					if ((containerTop + containerHeight > scrollTop) && (containerTop < (scrollTop + windowHeight))) {
+						$image.css({
+							"-webkit-transform": "translate3D(-50%, " + translate + "px, 0)",
+							"-moz-transform": "translate3D(-50%, " + translate + "px, 0)",
+							"-ms-transform": "translate3D(-50%, " + translate + "px, 0)",
+							"-o-transform": "translate3D(-50%, " + translate + "px, 0)",
+							"transform": "translate3D(-50%, " + translate + "px, 0)"
+						});
+					}
 
 					if (!initialized) {
 						$image.css("opacity", "1");
